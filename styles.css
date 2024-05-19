@@ -1,3 +1,49 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
 #container{
     display: grid;
+    height: 40vmin;
+    aspect-ratio: 1/1;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0.5vmin;
+    gap: 0.5vmin;
+    background-color: #B3E5FC;
+    border-radius: 0.4vmin;
+}
+#screen{
+    justify-content: end !important;
+    grid-column: span 5;
+    background-color: #fff;
+}
+.double{
+    grid-column: span 2;
+}
+#ac{
+    background-color: #ff6b6b;
+}
+#\={
+    background-color: #9de0ad;
+}
+.num{
+    background-color: #89c4f4;
+}
+.operator{
+    background-color: #ffb347;
+}
+#container *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 3vmin;
+    border-radius: 0.4vmin;
 }
