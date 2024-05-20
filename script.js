@@ -55,21 +55,24 @@ const inputNumber = num => {
     resultGiven = false;
 };
 
-const buttonPressed = target => {
-    const id = target.id;
-    if (parseInt(id) || parseInt(id) === 0){
-        inputNumber(id);
-    } else if (target.className === 'operator') {
-        selectOperator(id);
-    } else if (id === '='){
+const buttonPressed = key => {
+    if (parseInt(key) || parseInt(key) === 0){
+        inputNumber(key);
+    } else if (key === '+' || key === '-' || key === '/' || key === '*') {
+        selectOperator(key);
+    } else if (key === '=' || key === 'Enter'){
         calculate()
-    } else if (id === '.'){
+    } else if (key === '.'){
         selectDecimal()
-    } else if (id === 'ac'){
+    } else if (key === 'ac' || key === 'Delete'){
         clear();
     } 
 };
 
 document.addEventListener('click', e => {
-    buttonPressed(e.target);
+    buttonPressed(e.target.id);
+});
+
+document.addEventListener('keydown', e => {
+    buttonPressed(e.key)
 });
