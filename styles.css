@@ -1,3 +1,13 @@
+* {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
 body{
     width: 100vw;
     height: 100vh;
@@ -27,6 +37,18 @@ body{
 }
 .double{
     grid-column: span 2;
+}
+#ac, #\=, .num, .operator{
+    cursor: pointer;
+}
+#ac:hover, #\=:hover, .num:hover, .operator:hover {
+    box-shadow: 0 2px #999;
+    transform: translateY(2px);
+}
+#ac:active, #\=:active, .num:active, .operator:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(3px);
+    color: #999;
 }
 #ac{
     background-color: #ff6b6b;
